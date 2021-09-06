@@ -99,7 +99,7 @@ db.posts.insert({
     title: "Second Post",
     by: "hong",
     likes: 50
-)}
+})
 
 db.posts.insert({
     title: "Third Post",
@@ -116,11 +116,11 @@ db.posts.insert({
 // 여러 문서를 insert - insertMany
 db.posts.insertMany([
     { title: "Fifth Post",
-	by: "bit",
-	likes: 50 },
+	    by: "bit",
+	    likes: 50 },
     { title: "Sixth Post",
-	by: "hong",
-	likes: 50 }
+	    by: "hong",
+	    likes: 50 }
 ])
 
 // 문서의 검색
