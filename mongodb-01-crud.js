@@ -136,12 +136,12 @@ function testInsertManyDocs(docs) {
         }
     })
 }
-testInsertManyDocs(
-    [{name: '고길동', gender: '남성', species: '인간', age: 50},
-     {name: '둘리', gender: '남성', species: '공룡', age: 10000000},
-     {name: '도우너', gender: '남성', species: '외계인', age: 15},
-     {name: '또치', gender: '여성', species: '조류', age: 15},
-     {name: '영희', gender: '여성', species: '인간', age: 12}]);
+// testInsertManyDocs(
+//     [{name: '고길동', gender: '남성', species: '인간', age: 50},
+//      {name: '둘리', gender: '남성', species: '공룡', age: 10000000},
+//      {name: '도우너', gender: '남성', species: '외계인', age: 15},
+//      {name: '또치', gender: '여성', species: '조류', age: 15},
+//      {name: '영희', gender: '여성', species: '인간', age: 12}]);
 
 // 함수 내보내기: 다른 모듈에서 사용할 수 있게  
 exports.testInsertOneDoc = testInsertOneDoc;
