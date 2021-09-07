@@ -117,7 +117,24 @@ function testInsertOneDoc(doc) {
 // testInsertOneDoc({name: "임꺽정", job: "도적"});
 
 function testInsertManyDocs(docs) {
-
+    client.connect()
+    .then(client => {
+        const db = client.db("mydb");
+        if (Array.isArray(docs)) {
+            //  여러 개의 문서
+            db.collection('friends').insertMany(docs)
+            .then(result => {
+                console.log(result.insertedCount, "개 삽입");
+                client.close();
+            })
+            .catch(reason => {
+                console.error(reason);
+            })
+        } else {
+            //  1개 문서
+            testInsertOneDoc(docs);
+        }
+    })
 }
 testInsertManyDocs(
     [{name: '고길동', gender: '남성', species: '인간', age: 50},
